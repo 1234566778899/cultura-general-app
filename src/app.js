@@ -5,7 +5,7 @@ const cors = require('cors')
 app.use(express.json());
 const port = process.env.PORT || 4000;
 
-app.use(cors());
+app.use(cors({ origin: ['https://cultura-general-web.vercel.app'] }));
 
 app.get('/', (req, res) => {
     res.send('v.1.0.13')
